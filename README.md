@@ -7,7 +7,7 @@ TMC Workshop demonstrating caching and session offloading
 Time | Session
 ---- | -------
 9:00 AM - 9:15 AM | _Workshop Kickoff And Intros_
-9:15 AM - 10:00 AM | _Presentation: Tanzu Gemfire by VMare - _
+9:15 AM - 10:00 AM | _Presentation: Tanzu Gemfire by VMare_
 10:15 AM - 12:00 PM | _Developer Workshop (*LABS*)_
 12:00 PM - 1:00 PM | _Lunch_
 
