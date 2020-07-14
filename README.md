@@ -14,7 +14,7 @@ Time | Session
 **Prerequisites**
 
 Start by downloading and installing the appropriate prerequisite tools.
-- [Cloud Foundry CLI from package manager](brew install cloudfoundry/tap/cf-cli)
+- Cloud Foundry CLI from package manager `brew install cloudfoundry/tap/cf-cli`
 - [Cloud Foundry CLI](MAC: https://cli.run.pivotal.io/stable?release=macosx64&source=pws, Windows: https://cli.run.pivotal.io/stable?release=windows64&source=pws) to interact with a cloud foundry instance
 - [Git Client](https://git-scm.com/downloads) to clone Github repo or download and unzip
 - *Optional* An IDE, like [Spring Tool Suite](https://spring.io/tools/sts/all) or [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
