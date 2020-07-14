@@ -50,5 +50,5 @@ In order to perform the labs, you must be connected or logged into a live PCF en
   - [Lab 2 - Look-Aside Caching](session_02/lab_02/lab_02.adoc)
   - [Lab 3 - Session State Caching](session_02/lab_03/lab_03.adoc)
 
-### _Lunch:_
+### _Lunch and Beer_
 
