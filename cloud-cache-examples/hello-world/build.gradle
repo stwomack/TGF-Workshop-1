@@ -1,0 +1,78 @@
+/*
+ * Copyright (C) 2019-Present Pivotal Software, Inc. All rights reserved.
+ *
+ * This program and the accompanying materials are made available under the terms of the under the Apache License, Version
+ * 2.0 (the "License”); you may not use this file except in compliance with the License. You may obtain a copy of the
+ * License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
+ * language governing permissions and limitations under the License.
+ */
+
+buildscript{
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'
+
+group = 'io.pivotal.cloudcache.helloworld'
+sourceCompatibility = "$javaVersion"
+
+repositories {
+    mavenCentral()
+    maven {
+        credentials {
+            username "$gemfireReleaseRepoUser"
+            password "$gemfireReleaseRepoPassword"
+        }
+        url "https://commercial-repo.pivotal.io/data3/gemfire-release-repo/gemfire"
+    }
+}
+
+dependencies {
+    implementation("org.springframework.geode:spring-gemfire-starter:${springBootStarterVersion}")
+    implementation('org.springframework.boot:spring-boot-starter-web')
+}
+
+task createClusterDirectory(type: Exec) {
+    group = 'cluster'
+    dependsOn 'cleanUpClusterDirectory'
+    commandLine 'mkdir', 'cluster'
+}
+
+task startCluster(type: Exec) {
+    group = 'cluster'
+    dependsOn 'createClusterDirectory'
+    workingDir './cluster'
+    commandLine 'gfsh', 'run', '--file=../scripts/start.gfsh'
+}
+
+task stopCluster(type: Exec) {
+    group = 'cluster'
+    commandLine 'gfsh', 'run', '--file=./scripts/stop.gfsh'
+}
+
+task cleanUpClusterDirectory(type: Exec) {
+    group = 'cluster'
+    commandLine 'rm', '-rf', 'cluster'
+}
+
+task stopAndCleanUpCluster {
+    group = 'cluster'
+    dependsOn 'stopCluster'
+    dependsOn 'cleanUpClusterDirectory'
+}
+
+bootRun {
+    jvmArgs = ["-Dspring.profiles.active=localCluster"]
+}

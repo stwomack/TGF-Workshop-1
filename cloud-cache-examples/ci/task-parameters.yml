@@ -1,0 +1,166 @@
+applications:
+  - appName: hello-world
+    appPath: hello-world
+    jarName: hello-world
+    healthCheckType: port
+    localTestScript: hello-world/test-hello-world.sh
+    gemfireVersions:
+      - "9.8.6"
+      - "9.9.1"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+      - springBootVersion: 2.1.11.RELEASE
+        springBootStarterVersion: 1.1.4.RELEASE
+        springBootVersionFormattedForAppName: 2-1
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: look-aside-cache
+    appPath: look-aside-cache
+    jarName: look-aside-cache
+    healthCheckType: port
+    localTestScript: local/run-gradle-test.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: session-state
+    appPath: session-state
+    jarName: session-state
+    healthCheckType: port
+    localTestScript: local/run-gradle-test.sh
+    usesCypressTests: true
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: boot-cloud-cache
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot/cloud-cache
+    jarName: boot.session.cloudcache
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: boot-simple-cloud-cache
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot-simple/cloud-cache
+    jarName: bootsimple.session.cloudcache
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: boot-json-cloud-cache
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot-json/cloud-cache
+    jarName: bootjson.session.cloudcache
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state-json.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: pub-sub-cloud-cache
+    appPath: redis-to-cloud-cache/pub-sub/cloud-cache
+    jarName: pubsub.cloudcache
+    healthCheckType: process
+    localTestScript: redis-to-cloud-cache-examples/test-pub-sub.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+      - "11"
+
+  - appName: boot-redis
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot/redis
+    jarName: boot.session.redis
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+
+  - appName: boot-simple-redis
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot-simple/redis
+    jarName: bootsimple.session.redis
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+
+  - appName: boot-json-redis
+    appPath: redis-to-cloud-cache/session-state/spring-session-boot-json/redis
+    jarName: bootjson.session.redis
+    healthCheckType: port
+    localTestScript: redis-to-cloud-cache-examples/test-session-state-json.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"
+
+  - appName: pub-sub-redis
+    appPath: redis-to-cloud-cache/pub-sub/redis
+    jarName: pubsub.redis
+    healthCheckType: process
+    localTestScript: redis-to-cloud-cache-examples/test-pub-sub.sh
+    gemfireVersions:
+      - "none"
+    springBootVersions:
+      - springBootVersion: 2.2.4.RELEASE
+        springBootStarterVersion: 1.2.4.RELEASE
+        springBootVersionFormattedForAppName: 2-2
+    javaVersions:
+      - "8"

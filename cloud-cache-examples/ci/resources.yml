@@ -1,0 +1,24 @@
+resource_types:
+  - name: pull-request
+    type: docker-image
+    source:
+      repository: teliaoss/github-pr-resource
+
+resources:
+  - name: cloud-cache-examples
+    type: git
+    source:
+      branch: master
+      depth: 1
+      paths:
+        - ci/*
+      uri: https://github.com/pivotal/cloud-cache-examples.git
+
+  - name: cloud-cache-prs
+    type: pull-request
+    source:
+      access_token: ((access-token))
+      repository: pivotal/cloud-cache-examples
+      base_branch: master
+      disable_forks: true
+      disable_ci_skip: true

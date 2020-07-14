@@ -1,0 +1,63 @@
+<!--
+  ~ Copyright (C) 2019-Present Pivotal Software, Inc. All rights reserved.
+  ~
+  ~ This program and the accompanying materials are made available under the terms of the under the Apache License, Version
+  ~ 2.0 (the "License”); you may not use this file except in compliance with the License. You may obtain a copy of the
+  ~ License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific
+  ~ language governing permissions and limitations under the License.
+  -->
+
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bike Incidents in Your Area</title>
+    <link rel="icon" th:href="@{/images/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main role="main" class="container">
+    <div class="header-wrapper">
+        <h1>Bike Incidents in Your Area</h1>
+        <form class="zipCode-search-form" action="#" th:action="@{/}" method="post">
+            <label class="zipCode_label"
+                    for="zipCode">Zip Code:</label>
+            <input class="zipCode-input"
+                   type="text"
+                   inputmode="numeric"
+                   name="zipCode"
+                   id="zipCode"
+                   th:value="${zipCode}"
+                   placeholder="zip code">
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="layout-wrapper">
+        <section class="incidents" th:if="${bikeIncidents!=null}">
+            <h2>Results</h2>
+            <div th:if="${bikeIncidents!=null and #lists.isEmpty(bikeIncidents)}">
+                <p>No Incidents Found</p>
+            </div>
+            <div class="incident-container" th:each="incident : ${bikeIncidents}">
+                <h3 th:text="${incident.title}"></h3>
+                    <h4 th:text="${incident.type}"></h4>
+                    <p th:text="${incident.address}"></p>
+                    <p th:text="${incident.description}"></p>
+            </div>
+        </section>
+        <section class="response-time-container" th:if="${responseTimes!=null}">
+            <h2>Response Time</h2>
+            <ul class="response-time-list" th:each="responseTime : ${responseTimes}">
+                <li th:text="${responseTime}"></li>
+            </ul>
+        </section>
+    </div>
+</main>
+</body>
+</html>
