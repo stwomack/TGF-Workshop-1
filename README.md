@@ -9,13 +9,13 @@ Time | Session
 9:00 AM - 9:15 AM | _Workshop Kickoff And Intros_
 9:15 AM - 10:00 AM | _Presentation: VMware Tanzu GemFire_
 10:15 AM - 12:00 PM | _Developer Workshop (*LABS*)_
-12:00 PM - 1:00 PM | _Lunch_
+12:00 PM - 1:00 PM | _Lunch and Beers_
 
 **Prerequisites**
 
 Start by downloading and installing the appropriate prerequisite tools.
 - Cloud Foundry CLI from package manager `brew install cloudfoundry/tap/cf-cli`
-- [Cloud Foundry CLI for others operating systems](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+- [Cloud Foundry CLI for other operating systems](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
 - [Git Client](https://git-scm.com/downloads) to clone Github repo or download and unzip
 - *Optional* An IDE, like [Spring Tool Suite](https://spring.io/tools/sts/all) or [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 - [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
@@ -43,13 +43,12 @@ In order to perform the labs, you must be connected or logged into a live PCF en
 
 ## Labs Materials
 
-### _VMware Tanzu GemFire_ [(Slides)](session_01/Session_01-VMware Tanzu GemFire.pptx)
+### _VMware Tanzu GemFire_ [(Slides)](session_01/Session_01-VMware-Tanzu-GemFire.pptx)
 
 ### _Enabling Continuous Delivery with 'cf push'_
-  - [Lab 1 - Building and Pushing Your First Application](session_02/lab_01/lab_01.adoc)
-  - [Lab 2 - Binding to Cloud Foundry Services](session_02/lab_02/lab_02.adoc)
-  - [Lab 3 - Scaling Applications](session_02/lab_03/lab_03.adoc)
-  - [Lab 4 - Monitoring Applications](session_02/lab_04/lab_04.adoc)
+  - [Lab 1 - Build, Push, Bind A Simple Caching Application](session_02/lab_01/lab_01.adoc)
+  - [Lab 2 - Look-Aside Caching](session_02/lab_02/lab_02.adoc)
+  - [Lab 3 - Session State Caching](session_02/lab_03/lab_03.adoc)
 
 ### _Lunch:_
 
