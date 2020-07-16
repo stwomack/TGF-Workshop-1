@@ -51,5 +51,7 @@ vi manifest.yaml
 cf push
 ```
 
+#### Verify Application
+The TAS output will show where the application is running, for example `https://helloworld-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it take a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
 
 link:/README.md#course-materials[Course Materials home] | link:/session_03/lab_02/lab_02.adoc[Lab 2 - Binding to Cloud Foundry Services]
