@@ -1,1 +1,4 @@
 .ipynb_checkpoints
+cloud-cache-examples/look-aside-cache/gradle.properties
+cloud-cache-examples/redis-to-cloud-cache/pub-sub/cloud-cache/gradle.properties
+cloud-cache-examples/session-state/gradle.properties
