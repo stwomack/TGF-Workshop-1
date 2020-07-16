@@ -56,4 +56,4 @@ The TAS output will show where the application is running, for example `https://
 
 #### Move on to next lab
 
-[Lab 2 - Look-Aside Caching](../lab_02/lab_02.md)
+[Lab 2 - Session State Caching](../lab_03/lab_03.md)
