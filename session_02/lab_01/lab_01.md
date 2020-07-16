@@ -54,6 +54,6 @@ cf push
 #### Verify Application
 The TAS output will show where the application is running, for example `https://helloworld-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it take a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
 
-##### Move on to next lab
+#### Move on to next lab
 
 [Lab 2 - Look-Aside Caching](session_02/lab_02/lab_02.md)
