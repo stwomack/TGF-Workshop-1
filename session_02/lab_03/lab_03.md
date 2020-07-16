@@ -1,54 +1,59 @@
 ![VMware Tanzu Gemfire](/images/vmware-tanzu.png)
 # TGF-Workshop-1
-TMC Workshop demonstrating caching and session offloading
+*TMC Workshop demonstrating caching and session offloading*
 
-## Agenda
+### Lab 2 - Session State Caching
 
-Time | Session
----- | -------
-9:00 AM - 9:15 AM | _Workshop Kickoff And Intros_
-9:15 AM - 10:00 AM | _Presentation: VMware Tanzu GemFire_
-10:15 AM - 12:00 PM | _Developer Workshop (*LABS*)_
-12:00 PM - 1:00 PM | _Lunch and Beers_
-
-**Prerequisites**
-
-Start by downloading and installing the appropriate prerequisite tools.
-- Cloud Foundry CLI from package manager `brew install cloudfoundry/tap/cf-cli`
-- [Cloud Foundry CLI for other operating systems](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-- [Git Client](https://git-scm.com/downloads) to clone Github repo or download and unzip
-- *Optional* An IDE, like [Spring Tool Suite](https://spring.io/tools/sts/all) or [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
-- [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
-
-**Download materials**
-
-Next, download the course materials.  This can be accomplished either through the GitHub website by downloading a repository zip and unzipping locally, or if you have Git installed, use the following commands:
-
+#### Target Tanzu Appliction Service Instance
+1. If you haven't already, download the latest release of the PCF CLI for your operating system and install it.
+2. Use the API target and username/password provided by the instructor..
+3. Login to Tanzu Application Service:
 ```
-git clone https://github.com/stwomack/TGF-Workshop-1.git
-cd TGF-Workshop-1
+cf api api.sys.fowler.cf-app.com --skip-ssl-validation
+```
+4. Follow the prompts, choosing default organization and space.
+
+#### Create an instance of Tanzu Gemfire
+1. Execute the following command, but substute your last name for *womack*
+```
+cf create-service p-cloudcache small tgf-womack
+```
+2. The service will take a while to provision, so take a break or help a neighbor who's stuck
+3. If you'd like to watch the status of the service being provisioned, execute the following until it is complete. 
+```
+watch cf service tgf-womack
+```
+4. You'll know it's complete when you see the following:
+```
+Last Operation
+Status: create succeeded
+Message: Instance provisioning completed
+```
+5. When that is complete, move on to the following section
+
+#### Build Application
+1. In a terminal window, from the directory you checked out this repo, change to the following directory:
+```
+cd cloud-cache-examples/hello-world
+```
+2. Build the application using gradlew
+```
+./gradlew build
+```
+3. Edit the manifest file, replacing name with your last name, and <SERVICE-INSTANCE-NAME> with the TGF instance you created in the previous section
+```
+vi manifest.yaml
+```
+4. change **helloworld** to **helloworld-womack**, or whatever your last name is
+5. change ``<SERVICE-INSTANCE-NAME>`` to **tgf-womack**, or whatever you named your service instance
+6. Push the application
+```
+cf push
 ```
 
-```
-$ git clone git@github.com:stwomack/TGF-Workshop-1.git
-$ cd TGF-Workshop-1
-```
+#### Verify Application
+The TAS output will show where the application is running, for example `https://helloworld-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it take a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
 
-***NOTE***
-When labs reference $COURSE_HOME, that's where you checked out this repository
+#### Move on to next lab
 
-**PCF Environments**
-
-In order to perform the labs, you must be connected or logged into a live PCF environment.
-
-## Labs Materials
-
-### _VMware Tanzu GemFire_ [(Slides)](session_01/Session_01-VMware-Tanzu-GemFire.pptx)
-
-### _Enabling Continuous Delivery with 'cf push'_
-  - [Lab 1 - Build, Push, Bind A Simple Caching Application](session_02/lab_01/lab_01.adoc)
-  - [Lab 2 - Look-Aside Caching](session_02/lab_02/lab_02.adoc)
-  - [Lab 3 - Session State Caching](session_02/lab_03/lab_03.adoc)
-
-### _Lunch and Beer_
-
+[Lab 2 - Session State Caching](../lab_03/lab_03.md)
