@@ -2,34 +2,7 @@
 # TGF-Workshop-1
 *TMC Workshop demonstrating caching and session offloading*
 
-### Lab 2 - Look Aside Caching
-
-#### Target Tanzu Appliction Service Instance
-1. If you haven't already, download the latest release of the PCF CLI for your operating system and install it.
-2. Use the API target and username/password provided by the instructor..
-3. Login to Tanzu Application Service:
-```
-cf api api.sys.fowler.cf-app.com --skip-ssl-validation
-```
-4. Follow the prompts, choosing default organization and space.
-
-#### Create an instance of Tanzu Gemfire
-1. Execute the following command, but substute your last name for *womack*
-```
-cf create-service p-cloudcache small tgf-womack
-```
-2. The service will take a while to provision, so take a break or help a neighbor who's stuck
-3. If you'd like to watch the status of the service being provisioned, execute the following until it is complete. 
-```
-watch cf service tgf-womack
-```
-4. You'll know it's complete when you see the following:
-```
-Last Operation
-Status: create succeeded
-Message: Instance provisioning completed
-```
-5. When that is complete, move on to the following section
+### Lab 2 - Look-Aside Caching
 
 #### Build Application
 1. In a terminal window, from the directory you checked out this repo, change to the following directory:
