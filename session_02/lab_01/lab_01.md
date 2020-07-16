@@ -22,11 +22,11 @@ cf api api.sys.fowler.cf-app.com --skip-ssl-validation
 1. In a terminal window, from the directory you checked out this repo, change to the following directory:
 `cd cloud-cache-examples/hello-world`
 2. Build the application using gradlew
-`./gradlew build`
+```./gradlew build```
 3. Edit the manifest file, replacing name with your last name, and <SERVICE-INSTANCE-NAME> with the TGF instance you created in the previous section
-`vi manifest.yaml`
-`change 'helloworld' to 'helloworld-womack', or whatever your last name is
-`change <SERVICE-INSTANCE-NAME> with tgf-womack, of whatever you named your service instance
+```vi manifest.yaml```
+```change 'helloworld' to 'helloworld-womack', or whatever your last name is```
+```change <SERVICE-INSTANCE-NAME> with tgf-womack, of whatever you named your service instance```
 4. Push the application
 `cf push`
 
