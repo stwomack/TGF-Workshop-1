@@ -12,6 +12,6 @@
 ---
 applications:
   - name: helloworld-womack
-    path: ./build/libs/helloworld.jar
+    path: ./build/libs/hello-world.jar
     services:
       - tgf-womack
