@@ -3,7 +3,9 @@
 *TMC Workshop demonstrating caching and session offloading*
 
 ### Lab 2 - Look-Aside Caching
-* For full instructions on building this application, including the annotation required to make this work, visit the following link: https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
+* For full instructions on how this application is built, including the @Cacheable annotion required to make this work, visit the following link: 
+
+https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
 
 #### Build Application
 1. In your terminal window, switch to the following directory:
@@ -26,7 +28,7 @@ cf push
 ```
 
 #### Verify Application
-The TAS output will show where the application is running, for example `https://bikeincidents-womack.apps.fowler.cf-app.com`. You'll notice that the first time you hit the url, it takes a bit of time, but once the incident-api data has been cached in TGF, further refreshes will show dramatically increased performance.
+The TAS output will show where the application is running, for example `https://bikeincidents-womack.apps.fowler.cf-app.com`. You'll notice that the first time you hit the url and search using a zip code, it takes a bit of time, but once the incident-api data has been cached in TGF, further refreshes will show dramatically increased performance.
 
 #### Move on to next lab
 
