@@ -26,7 +26,7 @@ cf push
 ```
 
 #### Verify Application
-The TAS output will show where the application is running, for example `https://bikeincidents-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it takes a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
+The TAS output will show where the application is running, for example `https://bikeincidents-womack.apps.fowler.cf-app.com`. You'll notice that the first time you hit the url, it takes a bit of time, but once the incident-api data has been cached in TGF, further refreshes will show dramatically increased performance.
 
 #### Move on to next lab
 
