@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: session-state
+  - name: session-state-womack
     path: ./build/libs/session-state.jar
     services:
-      - <SERVICE-INSTANCE-NAME>
+      - tgf-womack

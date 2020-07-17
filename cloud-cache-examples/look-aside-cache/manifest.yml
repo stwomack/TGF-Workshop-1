@@ -12,7 +12,7 @@
 
 ---
 applications:
-  - name: bikeincidents
+  - name: bikeincidents-womack
     path: ./build/libs/look-aside-cache.jar
     services:
-      - <SERVICE-INSTANCE-NAME>
+      - tgf-womack
