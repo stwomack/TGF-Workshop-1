@@ -40,7 +40,7 @@ cd cloud-cache-examples/hello-world
 ```
 ./gradlew build
 ```
-3. Edit the manifest file, replacing name with your last name, and <SERVICE-INSTANCE-NAME> with the TGF instance you created in the previous section
+3. Edit the manifest file, adding your lastname to the app name, and with the TGF instance you created in the previous section
 ```
 vi manifest.yaml
 ```
@@ -52,7 +52,7 @@ cf push
 ```
 
 #### Verify Application
-The TAS output will show where the application is running, for example `https://helloworld-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it take a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
+The TAS output will show where the application is running, for example `https://helloworld-womack.apps.fowler.cf-app.com` . add /hello to the path to view the application. You'll notice that the first time you hit the url, it takes a bit of time, but once the key/value are in TGF, further refreshes will show dramatically increased performance.
 
 #### Move on to next lab
 
