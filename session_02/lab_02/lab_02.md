@@ -3,6 +3,7 @@
 *TMC Workshop demonstrating caching and session offloading*
 
 ### Lab 2 - Look-Aside Caching
+* For full instructions on building this application, including the annotation required to make this work, visit the following link: https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
 
 #### Build Application
 1. In your terminal window, switch to the following directory:
