@@ -32,4 +32,4 @@ The TAS output will show where the application is running, for example `https://
 
 #### Move on to next lab
 
-Home(../../README.md)
+[Home](../../README.md)
