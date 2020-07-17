@@ -28,7 +28,7 @@ cf push
 ```
 
 #### Verify Application
-The TAS output will show where the application is running, for example `https://bikeincidents-womack.apps.fowler.cf-app.com`. You'll notice that the first time you hit the url and search using a zip code, it takes a bit of time, but once the incident-api data has been cached in TGF, further refreshes will show dramatically increased performance.
+The TAS output will show where the application is running, for example `https://session-state-womack.apps.fowler.cf-app.com`. As you add items to your list, you'll see that they're cached in your session, so if you open a new browser window/tab, they're still there. But if you destroy that session, or open with a different browswer, you start a new session.
 
 #### Move on to next lab
 
