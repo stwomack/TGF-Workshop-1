@@ -43,7 +43,7 @@ In order to perform the labs, you must be connected or logged into a live PCF en
 
 ## Labs Materials
 
-### _VMware Tanzu GemFire_ [(Slides)](session_01/Session_01-VMware-Tanzu-GemFire.pptx)
+### _VMware Tanzu GemFire_ [(Slides)](session_01/Session_01-VMware-Tanzu-GemFire.pdf)
 
 ### _Enabling Continuous Delivery with 'cf push'_
   - [Lab 1 - Build, Push, Bind A Simple Caching Application](session_02/lab_01/lab_01.md)
