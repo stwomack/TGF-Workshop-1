@@ -3,7 +3,7 @@
 *TMC Workshop demonstrating caching and session offloading*
 
 ### Lab 2 - Look-Aside Caching
-* For full instructions on how this application is built, including the @Cacheable annotion required to make this work, visit the following link: 
+* For full instructions on how this application is built, including the `@Cacheable` annotion required to make this work, visit the following link: 
 
 https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
 
