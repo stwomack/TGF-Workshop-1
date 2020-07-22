@@ -2,7 +2,7 @@
 # TGF-Workshop-1
 *TMC Workshop demonstrating caching and session offloading*
 
-### Lab 2 - Look-Aside Caching
+### Lab 3 - Session-State Caching
 * For full instructions on how this application is built, including the `request.getSession().setAttribute()` method required to make this work, visit the following link: 
 
 https://docs.pivotal.io/cloud-cache-dev/spring-boot/guides/session-state
