@@ -18,7 +18,7 @@ https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
 ```
 3. Edit the manifest file, adding your lastname to the app name, and <SERVICE-INSTANCE-NAME> with the TGF instance you created in the previous section
 ```
-vi manifest.yaml
+vi manifest.yml
 ```
 4. change the name from `bikeincidents-womack` to **bikeincidents-** whatever your last name is
 5. change `tgf-womack` to **tgf-** whatever you named your service instance
