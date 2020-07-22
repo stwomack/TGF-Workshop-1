@@ -9,7 +9,7 @@ Time | Session
 9:00 AM - 9:15 AM | _Workshop Kickoff And Intros_
 9:15 AM - 10:00 AM | _Presentation: VMware Tanzu GemFire_
 10:15 AM - 12:00 PM | _Developer Workshop (*LABS*)_
-12:00 PM - 1:00 PM | _Lunch and Beers_
+12:00 PM - ??? | _Lunch and Beers_
 
 **Prerequisites**
 
@@ -27,11 +27,6 @@ Next, download the course materials.  This can be accomplished either through th
 ```
 git clone https://github.com/stwomack/TGF-Workshop-1.git
 cd TGF-Workshop-1
-```
-
-```
-$ git clone git@github.com:stwomack/TGF-Workshop-1.git
-$ cd TGF-Workshop-1
 ```
 
 ***NOTE***
