@@ -20,8 +20,8 @@ https://docs.pivotal.io/cloud-cache-dev/spring-boot/guides/session-state
 ```
 vi manifest.yaml
 ```
-4. change **session-state-womack** to **session-state- whatever your last name is
-5. change `tgf-womack` to **tgf- whatever you named your service instance
+4. change the name from `session-state-womack`` to **session-state-** whatever your last name is
+5. change `tgf-womack` to **tgf-** whatever you named your service instance
 6. Push the application
 ```
 cf push
