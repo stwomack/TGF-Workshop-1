@@ -44,8 +44,8 @@ cd cloud-cache-examples/hello-world
 ```
 vi manifest.yaml
 ```
-4. change **helloworld-womack** to **helloworld- whatever your last name is
-5. change ``tgf-womack`` to **tgf- whatever you named your service instance
+4. change the name from `helloworld-womack` to **helloworld-** whatever your last name is
+5. change `tgf-womack` to **tgf-** whatever you named your service instance
 6. Push the application
 ```
 cf push
