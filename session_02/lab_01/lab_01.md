@@ -42,7 +42,7 @@ cd cloud-cache-examples/hello-world
 ```
 3. Edit the manifest file, adding your lastname to the app name, and with the TGF instance you created in the previous section
 ```
-vi manifest.yaml
+vi manifest.yml
 ```
 4. change the name from `helloworld-womack` to **helloworld-** whatever your last name is
 5. change `tgf-womack` to **tgf-** whatever you named your service instance
