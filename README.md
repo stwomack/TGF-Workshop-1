@@ -32,9 +32,9 @@ cd TGF-Workshop-1
 ***NOTE***
 When labs reference $COURSE_HOME, that's where you checked out this repository
 
-**PCF Environments**
+**TAZ Environments**
 
-In order to perform the labs, you must be connected or logged into a live PCF environment.
+In order to perform the labs, you must be connected or logged into a live TAS environment.
 
 ## Labs Materials
 
