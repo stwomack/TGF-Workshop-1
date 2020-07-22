@@ -5,7 +5,7 @@
 ### Lab 1 - Building and Pushing Your First Application
 
 #### Target Tanzu Appliction Service Instance
-1. If you haven't already, download the latest release of the PCF CLI for your operating system and install it.
+1. If you haven't already, download the latest release of the TAS CLI for your operating system and install it.
 2. Use the API target and username/password provided by the instructor..
 3. Login to Tanzu Application Service:
 ```
