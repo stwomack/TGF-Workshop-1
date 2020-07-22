@@ -20,8 +20,8 @@ https://docs.pivotal.io/cloud-cache-dev/spring-boot/basic-cache
 ```
 vi manifest.yaml
 ```
-4. change **bikeincidents-womack** to **bikeincidents- whatever your last name is
-5. change `tgf-womack` to **tgf- whatever you named your service instance
+4. change the name from `bikeincidents-womack` to **bikeincidents-** whatever your last name is
+5. change `tgf-womack` to **tgf-** whatever you named your service instance
 6. Push the application
 ```
 cf push
